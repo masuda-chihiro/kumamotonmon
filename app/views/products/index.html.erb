@@ -1,5 +1,14 @@
-<div class="center jumbotron">
-  <h1>商品一覧</h1>
-  <p>ここに商品一覧を表示したい。商品詳細に飛べるようにもしたいのさ</p>
-  <%= link_to "商品詳細へ", products_syousai_path, class: "btn btn-lg btn-primary" %>
-</div>
+<% provide(:title, '商品一覧') %>
+<h1>商品一覧</h1>
+
+
+
+<ul class="products">
+<% @products.each do |product| %>
+    <%= product.name %>
+    <%= product.explanation %>
+    <% end %>
+</ul>
+
+
+<%= link_to "商品詳細へ", show_path, class: "btn btn-lg btn-primary" %>

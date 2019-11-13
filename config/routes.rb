@@ -2,15 +2,13 @@ Rails.application.routes.draw do
   get 'products/new'
 
   get 'products/create'
-  get '/products_ichiran',  to: 'products#index'
+  get '/index',  to: 'products#index'
   get 'products/edit'
-  get '/products_syousai',  to: 'products#show'
+  get '/show',  to: 'products#show'
   get 'products/update'
-
   get 'sessions/new'
-
   get 'users/new'
-
+  
   root 'static_pages#home'
   get 'static_pages/home'
   get  '/signup',  to: 'users#new'
